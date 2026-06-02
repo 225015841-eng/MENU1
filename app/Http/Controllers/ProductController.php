@@ -3,62 +3,158 @@
 namespace App\Http\Controllers;
 
 use App\Models\Product;
-use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
-use Illuminate\View\View;
 
 class ProductController extends Controller
 {
-    public function menu(): View
+    public function menu()
     {
-        return view('menu', [
-            'products' => Product::orderBy('id')->get(),
+        $products = Product::where('is_active', true)
+            ->orderBy('category')
+            ->get();
+
+        return view('menu', compact('products'));
+    }
+
+    public function index()
+    {
+        if (request()->wantsJson()) {
+            return response()->json([
+                'success' => true,
+                'data' => Product::where('is_active', true)
+                    ->orderBy('category')
+                    ->get(),
+                'message' => 'Productos obtenidos exitosamente'
+            ]);
+        }
+
+        $products = Product::orderBy('category')->get();
+
+        return view('admin.index', compact('products'));
+    }
+
+    public function show($id)
+    {
+        $product = Product::find($id);
+
+        if (!$product) {
+            return response()->json([
+                'success' => false,
+                'message' => 'Producto no encontrado'
+            ], 404);
+        }
+
+        return response()->json([
+            'success' => true,
+            'data' => $product
         ]);
     }
 
-    public function index(): View
-    {
-        return view('admin.index', [
-            'products' => Product::orderBy('id')->get(),
-        ]);
-    }
-
-    public function store(Request $request): RedirectResponse
+    protected function normalizeProductData(Request $request): array
     {
         $validated = $request->validate([
             'name' => 'required|string|max:255',
             'description' => 'nullable|string',
-            'price' => 'required|numeric|min:0',
-            'category' => 'required|string|max:255',
-            'tag' => 'nullable|string|max:255',
-            'badge' => 'nullable|string|max:255',
+            'price_usd' => 'required|numeric|min:0',
+            'price' => 'nullable|numeric|min:0',
+            'price_bs' => 'nullable|numeric|min:0',
+            'category' => 'required|string|max:100',
+            'tag' => 'nullable|string|max:100',
+            'badge' => 'nullable|string|max:100',
+            'image_url' => 'nullable|url',
+            'is_active' => 'boolean',
         ]);
 
-        Product::create($validated);
+        if ($request->filled('price')) {
+            $validated['price_usd'] = $validated['price'];
+            unset($validated['price']);
+        }
 
-        return redirect()->route('admin.products.index')->with('success', 'Producto agregado correctamente.');
+        return $validated;
     }
 
-    public function update(Request $request, Product $product): RedirectResponse
+    public function store(Request $request)
     {
-        $validated = $request->validate([
-            'name' => 'required|string|max:255',
-            'description' => 'nullable|string',
-            'price' => 'required|numeric|min:0',
-            'category' => 'required|string|max:255',
-            'tag' => 'nullable|string|max:255',
-            'badge' => 'nullable|string|max:255',
-        ]);
+        $validated = $this->normalizeProductData($request);
+
+        $product = Product::create($validated);
+
+        if ($request->wantsJson()) {
+            return response()->json([
+                'success' => true,
+                'data' => $product,
+                'message' => 'Producto creado exitosamente'
+            ], 201);
+        }
+
+        return redirect()->back()->with('success', 'Producto creado exitosamente');
+    }
+
+    public function update(Request $request, $id)
+    {
+        $product = Product::find($id);
+
+        if (!$product) {
+            if ($request->wantsJson()) {
+                return response()->json([
+                    'success' => false,
+                    'message' => 'Producto no encontrado'
+                ], 404);
+            }
+
+            return redirect()->back()->withErrors(['Producto no encontrado']);
+        }
+
+        $validated = $this->normalizeProductData($request);
 
         $product->update($validated);
 
-        return redirect()->route('admin.products.index')->with('success', 'Producto actualizado correctamente.');
+        if ($request->wantsJson()) {
+            return response()->json([
+                'success' => true,
+                'data' => $product,
+                'message' => 'Producto actualizado exitosamente'
+            ]);
+        }
+
+        return redirect()->back()->with('success', 'Producto actualizado exitosamente');
     }
 
-    public function destroy(Product $product): RedirectResponse
+    public function destroy(Request $request, $id)
     {
+        $product = Product::find($id);
+
+        if (!$product) {
+            if ($request->wantsJson()) {
+                return response()->json([
+                    'success' => false,
+                    'message' => 'Producto no encontrado'
+                ], 404);
+            }
+
+            return redirect()->back()->withErrors(['Producto no encontrado']);
+        }
+
         $product->delete();
 
-        return redirect()->route('admin.products.index')->with('success', 'Producto eliminado correctamente.');
+        if ($request->wantsJson()) {
+            return response()->json([
+                'success' => true,
+                'message' => 'Producto eliminado exitosamente'
+            ]);
+        }
+
+        return redirect()->back()->with('success', 'Producto eliminado exitosamente');
+    }
+
+    public function byCategory($category)
+    {
+        return response()->json([
+            'success' => true,
+            'data' => Product::where('category', $category)
+                ->where('is_active', true)
+                ->get(),
+            'message' => "Productos de la categoría '{$category}' obtenidos"
+        ]);
     }
 }

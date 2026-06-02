@@ -126,9 +126,9 @@
 
             <div class="mb-10 rounded-lg border border-blue-600/30 bg-white/5 p-3 shadow-lg backdrop-blur-sm">
                 <div class="flex gap-3 overflow-x-auto no-scrollbar">
-                    <button class="shrink-0 rounded-lg border-2 border-blue-600 bg-blue-600 px-5 py-2 text-xs font-black uppercase transition text-white">Todos</button>
-                    <button class="shrink-0 rounded-lg border-2 border-blue-600/30 bg-transparent px-5 py-2 text-xs font-black uppercase transition hover:border-blue-600/60 text-gray-300">Combos</button>
-                    <button class="shrink-0 rounded-lg border-2 border-blue-600/30 bg-transparent px-5 py-2 text-xs font-black uppercase transition hover:border-blue-600/60 text-gray-300">Hamburguesas</button>
+                    <button type="button" data-filter="all" onclick="filterMenu('all')" class="shrink-0 rounded-lg border-2 border-blue-600 bg-blue-600 px-5 py-2 text-xs font-black uppercase transition text-white">Todos</button>
+                    <button type="button" data-filter="combos" onclick="filterMenu('combos')" class="shrink-0 rounded-lg border-2 border-blue-600/30 bg-transparent px-5 py-2 text-xs font-black uppercase transition hover:border-blue-600/60 text-gray-300">Combos</button>
+                    <button type="button" data-filter="hamburguesas" onclick="filterMenu('hamburguesas')" class="shrink-0 rounded-lg border-2 border-blue-600/30 bg-transparent px-5 py-2 text-xs font-black uppercase transition hover:border-blue-600/60 text-gray-300">Hamburguesas</button>
                 </div>
             </div>
 
@@ -194,9 +194,33 @@
 
         renderProducts();
         updateCartUI();
+        setActiveFilter('all');
 
         function loadProducts() {
             products = [...DEFAULT_PRODUCTS];
+        }
+
+        function filterMenu(category) {
+            if (category === 'all') {
+                products = [...DEFAULT_PRODUCTS];
+            } else {
+                products = DEFAULT_PRODUCTS.filter(product => product.category.toLowerCase() === category.toLowerCase());
+            }
+
+            renderProducts();
+            setActiveFilter(category);
+        }
+
+        function setActiveFilter(category) {
+            document.querySelectorAll('[data-filter]').forEach(button => {
+                if (button.dataset.filter === category) {
+                    button.classList.add('bg-blue-600', 'text-white', 'border-blue-600');
+                    button.classList.remove('bg-transparent', 'text-gray-300', 'border-blue-600/30');
+                } else {
+                    button.classList.remove('bg-blue-600', 'text-white', 'border-blue-600');
+                    button.classList.add('bg-transparent', 'text-gray-300', 'border-blue-600/30');
+                }
+            });
         }
 
         function renderProducts() {
@@ -392,7 +416,7 @@
             }
 
             let totalUSD = 0;
-            let message = "🍔 *NUEVO PEDIDO - LA BAMBUCHA* 🍔\n\n";
+            let message = "🍔 *NUEVO PEDIDO - PRUEBA* 🍔\n\n";
             message += "Hola, me gustaría ordenar lo siguiente:\n\n";
 
             cart.forEach(item => {

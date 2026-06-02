@@ -17,6 +17,17 @@
             </div>
         @endif
 
+        @if ($errors->any())
+            <div class="mb-6 rounded-3xl border border-red-500/20 bg-red-500/10 p-4 text-sm text-red-100">
+                <p class="font-black uppercase tracking-widest text-red-200">Hay errores al guardar:</p>
+                <ul class="mt-2 list-disc pl-5">
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
+
         <div class="space-y-6">
             @forelse($products as $product)
                 <form action="{{ route('admin.products.update', $product) }}" method="POST" class="rounded-3xl border border-blue-600/30 bg-black/70 p-6 shadow-lg shadow-blue-900/10">
@@ -38,7 +49,7 @@
                         <div class="grid gap-4">
                             <label class="block">
                                 <span class="text-xs font-black uppercase tracking-widest text-gray-400">Precio USD</span>
-                                <input name="price" type="number" step="0.01" value="{{ old('price', $product->price) }}" class="mt-2 w-full rounded-3xl border border-blue-600/30 bg-black/80 px-4 py-3 text-white focus:border-blue-400 focus:outline-none" required>
+                                <input name="price_usd" type="number" step="0.01" value="{{ old('price_usd', $product->price_usd) }}" class="mt-2 w-full rounded-3xl border border-blue-600/30 bg-black/80 px-4 py-3 text-white focus:border-blue-400 focus:outline-none" required>
                             </label>
                             <label class="block">
                                 <span class="text-xs font-black uppercase tracking-widest text-gray-400">Categoría</span>
@@ -92,7 +103,7 @@
                 <div class="space-y-4">
                     <label class="block">
                         <span class="text-xs font-black uppercase tracking-widest text-gray-400">Precio USD</span>
-                        <input name="price" type="number" step="0.01" value="{{ old('price') }}" class="mt-2 w-full rounded-3xl border border-blue-600/30 bg-black/80 px-4 py-3 text-white focus:border-blue-400 focus:outline-none" required>
+                        <input name="price_usd" type="number" step="0.01" value="{{ old('price_usd') }}" class="mt-2 w-full rounded-3xl border border-blue-600/30 bg-black/80 px-4 py-3 text-white focus:border-blue-400 focus:outline-none" required>
                     </label>
                     <label class="block">
                         <span class="text-xs font-black uppercase tracking-widest text-gray-400">Categoría</span>
