@@ -50,23 +50,23 @@
                     </div>
                 </a>
                 
-                <button type="button" onclick="toggleCart()" aria-label="Abrir carrito" class="relative flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-blue-600 text-white shadow-lg shadow-blue-600/40 transition hover:bg-blue-700 active:scale-95 sm:h-14 sm:w-14">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <button type="button" onclick="toggleCart()" aria-label="Abrir carrito" class="relative flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-blue-600 text-white shadow[...]
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="[...]
                         <circle cx="8" cy="21" r="1"></circle>
                         <circle cx="19" cy="21" r="1"></circle>
                         <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path>
                     </svg>
-                    <span id="cart-badge" class="absolute -top-2 -right-2 hidden h-6 min-w-6 items-center justify-center rounded-full bg-red-500 px-1.5 text-xs font-black text-white shadow-md">0</span>
+                    <span id="cart-badge" class="absolute -top-2 -right-2 hidden h-6 min-w-6 items-center justify-center rounded-full bg-red-500 px-1.5 text-xs font-black text-white shadow-md">0</[...]
                 </button>
             </div>
             
             <div class="relative mx-auto max-w-7xl px-3 pb-2 sm:px-6 lg:px-8">
                 <nav class="mx-auto flex gap-2 rounded-lg bg-white/5 p-2 backdrop-blur-sm">
-                    <a href="#inicio" class="flex-1 flex h-10 items-center justify-center text-center text-xs font-black uppercase tracking-wider transition duration-200 hover:bg-blue-600/30 rounded-md text-white sm:text-sm">INICIO</a>
-                    <a href="#menu" class="flex-1 flex h-10 items-center justify-center text-center text-xs font-black uppercase tracking-wider transition duration-200 hover:bg-blue-600/30 rounded-md text-white sm:text-sm">MENÚ</a>
-                    <a href="{{ route('admin.products.index') }}" class="flex-1 flex h-10 items-center justify-center text-center text-xs font-black uppercase tracking-wider transition duration-200 hover:bg-blue-600/30 rounded-md text-yellow-300 sm:text-sm">ADMIN</a>
-                    <a href="https://wa.me/584141427822" target="_blank" class="flex-1 flex h-10 items-center justify-center text-center text-xs font-black uppercase tracking-wider transition duration-200 hover:bg-blue-600/30 rounded-md text-green-400 sm:text-sm">WHATSAPP</a>
-                    <a href="https://www.instagram.com/la_bambucha_burguer/" target="_blank" rel="noreferrer" class="flex-1 flex h-10 items-center justify-center text-center text-xs font-black uppercase tracking-wider transition duration-200 hover:bg-blue-600/30 rounded-md text-pink-400 sm:text-sm">INSTAGRAM</a>
+                    <a href="#inicio" class="flex-1 flex h-10 items-center justify-center text-center text-xs font-black uppercase tracking-wider transition duration-200 hover:bg-blue-600/30 round[...]
+                    <a href="#menu" class="flex-1 flex h-10 items-center justify-center text-center text-xs font-black uppercase tracking-wider transition duration-200 hover:bg-blue-600/30 rounded[...]
+                    <a href="{{ route('admin.products.index') }}" class="flex-1 flex h-10 items-center justify-center text-center text-xs font-black uppercase tracking-wider transition duration-20[...]
+                    <a href="https://wa.me/584141427822" target="_blank" class="flex-1 flex h-10 items-center justify-center text-center text-xs font-black uppercase tracking-wider transition dura[...]
+                    <a href="https://www.instagram.com/la_bambucha_burguer/" target="_blank" rel="noreferrer" class="flex-1 flex h-10 items-center justify-center text-center text-xs font-black upp[...]
                 </nav>
             </div>
         </div>
@@ -78,7 +78,7 @@
         
         <div class="relative mx-auto grid max-w-7xl items-center gap-10 md:grid-cols-[1fr_0.85fr]">
             <div class="text-center md:text-left">
-                <div class="mb-6 inline-flex items-center gap-3 rounded-lg border border-blue-600/50 bg-blue-600/10 px-6 py-3 text-sm font-black uppercase tracking-wider text-white shadow-lg shadow-blue-600/20">
+                <div class="mb-6 inline-flex items-center gap-3 rounded-lg border border-blue-600/50 bg-blue-600/10 px-6 py-3 text-sm font-black uppercase tracking-wider text-white shadow-lg shado[...]
                     <span class="h-3 w-3 rounded-full bg-blue-600"></span>
                     Premium Grill Experience
                 </div>
@@ -92,10 +92,10 @@
                 </p>
                 
                 <div class="mt-10 grid gap-4 sm:grid-cols-2 md:max-w-2xl">
-                    <a href="#menu" class="inline-flex items-center justify-center gap-2 rounded-lg bg-blue-600 px-8 py-4 text-sm font-black uppercase tracking-widest text-white shadow-lg shadow-blue-600/50 transition hover:bg-blue-700 active:scale-95">
+                    <a href="#menu" class="inline-flex items-center justify-center gap-2 rounded-lg bg-blue-600 px-8 py-4 text-sm font-black uppercase tracking-widest text-white shadow-lg shadow-b[...]
                         Ver Menú
                     </a>
-                    <a href="https://wa.me/584141427822" target="_blank" rel="noreferrer" class="inline-flex items-center justify-center gap-2 rounded-lg border-2 border-blue-600 bg-transparent px-8 py-4 text-sm font-black uppercase tracking-widest text-blue-400 transition hover:bg-blue-600/10">
+                    <a href="https://wa.me/584141427822" target="_blank" rel="noreferrer" class="inline-flex items-center justify-center gap-2 rounded-lg border-2 border-blue-600 bg-transparent px[...]
                         Ordenar Ahora
                     </a>
                 </div>
@@ -103,7 +103,7 @@
             
             <div class="relative mx-auto hidden max-w-md items-center justify-center md:flex">
                 <div class="absolute h-96 w-96 rounded-full bg-blue-600/20 blur-3xl"></div>
-                <div class="relative w-72 h-72 rounded-full bg-gradient-to-br from-blue-600 to-blue-900 flex items-center justify-center text-white font-black text-5xl shadow-2xl border-4 border-blue-400">
+                <div class="relative w-72 h-72 rounded-full bg-gradient-to-br from-blue-600 to-blue-900 flex items-center justify-center text-white font-black text-5xl shadow-2xl border-4 border-[...]
                     LB
                 </div>
             </div>
@@ -126,9 +126,9 @@
 
             <div class="mb-10 rounded-lg border border-blue-600/30 bg-white/5 p-3 shadow-lg backdrop-blur-sm">
                 <div class="flex gap-3 overflow-x-auto no-scrollbar">
-                    <button type="button" data-filter="all" onclick="filterMenu('all')" class="shrink-0 rounded-lg border-2 border-blue-600 bg-blue-600 px-5 py-2 text-xs font-black uppercase transition text-white">Todos</button>
-                    <button type="button" data-filter="combos" onclick="filterMenu('combos')" class="shrink-0 rounded-lg border-2 border-blue-600/30 bg-transparent px-5 py-2 text-xs font-black uppercase transition hover:border-blue-600/60 text-gray-300">Combos</button>
-                    <button type="button" data-filter="hamburguesas" onclick="filterMenu('hamburguesas')" class="shrink-0 rounded-lg border-2 border-blue-600/30 bg-transparent px-5 py-2 text-xs font-black uppercase transition hover:border-blue-600/60 text-gray-300">Hamburguesas</button>
+                    <button type="button" data-filter="all" onclick="filterMenu('all')" class="shrink-0 rounded-lg border-2 border-blue-600 bg-blue-600 px-5 py-2 text-xs font-black uppercase tran[...]
+                    <button type="button" data-filter="combos" onclick="filterMenu('combos')" class="shrink-0 rounded-lg border-2 border-blue-600/30 bg-transparent px-5 py-2 text-xs font-black up[...]
+                    <button type="button" data-filter="hamburguesas" onclick="filterMenu('hamburguesas')" class="shrink-0 rounded-lg border-2 border-blue-600/30 bg-transparent px-5 py-2 text-xs f[...]
                 </div>
             </div>
 
@@ -146,7 +146,7 @@
     <div id="cart-drawer" class="fixed inset-0 z-50 transition-all duration-300 opacity-0 invisible">
         <div onclick="toggleCart()" class="absolute inset-0 bg-black/80 backdrop-blur-md"></div>
         
-        <div class="absolute right-0 top-0 bottom-0 w-full max-w-md bg-black border-l-2 border-blue-600 p-6 flex flex-col shadow-2xl shadow-blue-600/20 transform translate-x-full transition-transform duration-300 overflow-y-auto" id="cart-container">
+        <div class="absolute right-0 top-0 bottom-0 w-full max-w-md bg-black border-l-2 border-blue-600 p-6 flex flex-col shadow-2xl shadow-blue-600/20 transform translate-x-full transition-trans[...]
             
             <div class="flex items-center justify-between border-b border-blue-600/30 pb-4 mb-4">
                 <div class="flex items-center gap-2">
@@ -165,6 +165,39 @@
                 </div>
             </div>
 
+            <!-- SECCIÓN DE DELIVERY/PICK UP -->
+            <div id="delivery-section" class="hidden border-t border-blue-600/30 pt-4 pb-4 space-y-4">
+                <div>
+                    <label class="text-sm font-black uppercase tracking-wider text-gray-400 mb-3 block">Tipo de Entrega</label>
+                    <div class="grid grid-cols-2 gap-3">
+                        <label class="flex items-center gap-2 cursor-pointer">
+                            <input type="radio" name="delivery_type" value="pickup" onchange="updateDeliveryType('pickup')" class="w-4 h-4 accent-blue-600">
+                            <span class="text-sm font-black uppercase">🏪 Pick up</span>
+                        </label>
+                        <label class="flex items-center gap-2 cursor-pointer">
+                            <input type="radio" name="delivery_type" value="delivery" onchange="updateDeliveryType('delivery')" class="w-4 h-4 accent-blue-600">
+                            <span class="text-sm font-black uppercase">🚗 Delivery</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- ÁREAS DE ENTREGA (aparece solo si selecciona Delivery) -->
+                <div id="delivery-zones" class="hidden">
+                    <label class="text-sm font-black uppercase tracking-wider text-gray-400 mb-3 block">Área de Entrega</label>
+                    <div id="zones-container" class="space-y-2">
+                        <!-- Se genera dinámicamente -->
+                    </div>
+                </div>
+
+                <!-- COSTO DE ENTREGA -->
+                <div id="delivery-cost-display" class="hidden bg-blue-600/10 border border-blue-600/30 rounded-lg p-3">
+                    <div class="flex justify-between items-center">
+                        <span class="text-xs font-black uppercase text-gray-400">Costo Delivery:</span>
+                        <span id="delivery-cost" class="text-lg font-black text-blue-400">+$0.00</span>
+                    </div>
+                </div>
+            </div>
+
             <div class="border-t border-blue-600/30 pt-4 space-y-4">
                 <div class="flex justify-between items-center">
                     <span class="text-sm font-black uppercase tracking-wider text-gray-400">Total USD:</span>
@@ -174,9 +207,9 @@
                     <span class="text-xs font-black uppercase text-gray-400">Equivalente Bs:</span>
                     <span id="total-bs" class="text-base font-black text-white">Bs 0.00</span>
                 </div>
-                <button onclick="sendOrderWhatsApp()" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-4 rounded-lg font-black uppercase tracking-wider shadow-lg shadow-blue-600/50 transition active:scale-95 flex items-center justify-center gap-2">
+                <button onclick="sendOrderWhatsApp()" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-4 rounded-lg font-black uppercase tracking-wider shadow-lg shadow-blue-600/50 trans[...]
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004c-1.925 0-3.712.693-5.072 1.99C5.560 9.503 4.822 11.25 4.822 13.207c0 2.141.883 4.15 2.487 5.652.823.76 1.882 1.38 3.027 1.701l.03.01h.014c.621 0 1.22-.099 1.779-.297 1.452-.497 2.745-1.387 3.658-2.605.45-.589.795-1.265 1.01-1.99.211-.715.322-1.48.322-2.252 0-1.956-.744-3.703-2.103-5.062-1.36-1.36-3.166-2.108-5.072-2.108"/>
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.8[...]
                     </svg>
                     Enviar Pedido
                 </button>
@@ -188,16 +221,72 @@
     <script>
         const TASA_CAMBIO = 40.00;
         const DEFAULT_PRODUCTS = @json($products->toArray());
+        const DELIVERY_ZONES = @json($zones ?? []);
         let products = [...DEFAULT_PRODUCTS];
         let cart = [];
         let cartOpen = false;
+        let orderData = {
+            deliveryType: null,
+            selectedZone: null,
+            deliveryCost: 0
+        };
 
         renderProducts();
         updateCartUI();
         setActiveFilter('all');
+        loadDeliveryZones();
 
         function loadProducts() {
             products = [...DEFAULT_PRODUCTS];
+        }
+
+        function loadDeliveryZones() {
+            const zonesContainer = document.getElementById('zones-container');
+            zonesContainer.innerHTML = '';
+
+            if(DELIVERY_ZONES.length === 0) {
+                zonesContainer.innerHTML = '<p class="text-xs text-gray-500">No hay zonas de entrega disponibles</p>';
+                return;
+            }
+
+            DELIVERY_ZONES.forEach(zone => {
+                const label = document.createElement('label');
+                label.className = 'flex items-center gap-2 cursor-pointer p-2 rounded-lg hover:bg-white/5 transition';
+                label.innerHTML = `
+                    <input type="radio" name="delivery_zone" value="${zone.id}" onchange="updateDeliveryZone(${zone.id}, ${zone.cost})" class="w-4 h-4 accent-blue-600">
+                    <div class="flex-1">
+                        <span class="text-sm font-black uppercase text-white">${zone.name}</span>
+                        <p class="text-xs text-blue-400">+$${zone.cost.toFixed(2)}</p>
+                    </div>
+                `;
+                zonesContainer.appendChild(label);
+            });
+        }
+
+        function updateDeliveryType(type) {
+            orderData.deliveryType = type;
+            const zonesSection = document.getElementById('delivery-zones');
+            const costDisplay = document.getElementById('delivery-cost-display');
+
+            if(type === 'delivery') {
+                zonesSection.classList.remove('hidden');
+                costDisplay.classList.remove('hidden');
+            } else {
+                zonesSection.classList.add('hidden');
+                costDisplay.classList.add('hidden');
+                orderData.selectedZone = null;
+                orderData.deliveryCost = 0;
+                document.querySelectorAll('input[name="delivery_zone"]').forEach(input => input.checked = false);
+            }
+
+            updateCartUI();
+        }
+
+        function updateDeliveryZone(zoneId, zoneCost) {
+            orderData.selectedZone = zoneId;
+            orderData.deliveryCost = zoneCost;
+            document.getElementById('delivery-cost').innerText = `+$${zoneCost.toFixed(2)}`;
+            updateCartUI();
         }
 
         function filterMenu(category) {
@@ -238,11 +327,11 @@
             productsGrid.innerHTML = products.map(product => {
                 const priceBs = (product.price * TASA_CAMBIO).toFixed(0);
                 return `
-                    <article class="group overflow-hidden rounded-lg border border-blue-600/30 bg-gradient-to-br from-white/5 to-white/[0.02] shadow-xl transition-all duration-300 hover:border-blue-600/60 hover:shadow-blue-600/20">
+                    <article class="group overflow-hidden rounded-lg border border-blue-600/30 bg-gradient-to-br from-white/5 to-white/[0.02] shadow-xl transition-all duration-300 hover:border-bl[...]
                         <div class="relative h-64 overflow-hidden bg-gradient-to-br from-gray-900 to-black sm:h-72">
-                            <div class="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-transparent flex items-center justify-center font-bold text-gray-600 text-xl">🍔 ${product.category.toUpperCase()}</div>
+                            <div class="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-transparent flex items-center justify-center font-bold text-gray-600 text-xl">🍔 ${product.categor[...]
                             <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent"></div>
-                            <span class="absolute left-4 top-4 rounded-lg border border-blue-400 bg-black/70 px-3 py-1 text-xs font-black uppercase tracking-widest text-blue-400">${product.tag}</span>
+                            <span class="absolute left-4 top-4 rounded-lg border border-blue-400 bg-black/70 px-3 py-1 text-xs font-black uppercase tracking-widest text-blue-400">${product.tag}</[...]
                             <div class="absolute bottom-4 left-4 right-4 flex items-end justify-between gap-3">
                                 <div class="max-w-[58%]">
                                     <p class="text-xs font-black uppercase tracking-widest text-blue-400">${product.badge}</p>
@@ -260,7 +349,7 @@
                             <p class="min-h-[56px] text-sm leading-relaxed text-gray-300 sm:text-base">
                                 ${product.description}
                             </p>
-                            <button type="button" onclick="addToCart(${product.id})" class="mt-6 flex w-full items-center justify-center gap-2 rounded-lg px-4 py-3 font-black uppercase transition active:scale-95 bg-blue-600 text-white hover:bg-blue-700 shadow-lg shadow-blue-600/40">
+                            <button type="button" onclick="addToCart(${product.id})" class="mt-6 flex w-full items-center justify-center gap-2 rounded-lg px-4 py-3 font-black uppercase transition[...]
                                 Agregar al carrito
                             </button>
                         </div>
@@ -330,14 +419,17 @@
         function updateCartUI() {
             const itemsContainer = document.getElementById('cart-items');
             const badge = document.getElementById('cart-badge');
+            const deliverySection = document.getElementById('delivery-section');
 
             const totalItems = cart.reduce((acc, item) => acc + item.quantity, 0);
             if(totalItems > 0) {
                 badge.innerText = totalItems;
                 badge.classList.remove('hidden');
                 badge.classList.add('flex');
+                deliverySection.classList.remove('hidden');
             } else {
                 badge.classList.add('hidden');
+                deliverySection.classList.add('hidden');
             }
 
             itemsContainer.innerHTML = '';
@@ -382,9 +474,9 @@
 
                         <div class="flex items-center justify-between gap-2">
                             <div class="flex items-center gap-2 bg-white/5 rounded-lg p-1 border border-blue-600/20">
-                                <button onclick="changeQuantity(${item.id}, -1)" class="w-7 h-7 flex items-center justify-center font-black text-base hover:bg-blue-600/20 rounded transition">−</button>
+                                <button onclick="changeQuantity(${item.id}, -1)" class="w-7 h-7 flex items-center justify-center font-black text-base hover:bg-blue-600/20 rounded transition">−<[...]
                                 <span class="w-6 text-center font-black text-xs text-white">${item.quantity}</span>
-                                <button onclick="changeQuantity(${item.id}, 1)" class="w-7 h-7 flex items-center justify-center font-black text-base hover:bg-blue-600/20 rounded transition">+</button>
+                                <button onclick="changeQuantity(${item.id}, 1)" class="w-7 h-7 flex items-center justify-center font-black text-base hover:bg-blue-600/20 rounded transition">+</bu[...]
                             </div>
                             <label class="flex items-center gap-2 cursor-pointer">
                                 <input type="checkbox" class="w-4 h-4 accent-blue-600" onchange="document.getElementById('note-${index}').classList.toggle('hidden')">
@@ -394,7 +486,7 @@
                     </div>
 
                     <textarea id="note-${index}" placeholder="Ejemplo: Sin picante, sin cebolla..." 
-                        class="hidden w-full px-3 py-2 rounded-lg bg-white/5 border border-blue-600/30 text-white text-xs placeholder-gray-600 focus:outline-none focus:border-blue-600 focus:ring-1 focus:ring-blue-600/50 resize-none" 
+                        class="hidden w-full px-3 py-2 rounded-lg bg-white/5 border border-blue-600/30 text-white text-xs placeholder-gray-600 focus:outline-none focus:border-blue-600 focus:ring-[...]
                         rows="2" 
                         onchange="updateItemNote(${item.id}, this.value)"
                         onkeyup="updateItemNote(${item.id}, this.value)"></textarea>
@@ -404,8 +496,9 @@
                 itemsContainer.appendChild(row);
             });
 
-            const totalBs = totalUSD * TASA_CAMBIO;
-            document.getElementById('total-usd').innerText = `$${totalUSD.toFixed(2)}`;
+            const finalTotal = totalUSD + orderData.deliveryCost;
+            const totalBs = finalTotal * TASA_CAMBIO;
+            document.getElementById('total-usd').innerText = `$${finalTotal.toFixed(2)}`;
             document.getElementById('total-bs').innerText = `Bs ${totalBs.toLocaleString('es-VE', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
         }
 
@@ -415,8 +508,18 @@
                 return;
             }
 
+            if(!orderData.deliveryType) {
+                alert("Por favor selecciona si es Delivery o Pick up.");
+                return;
+            }
+
+            if(orderData.deliveryType === 'delivery' && !orderData.selectedZone) {
+                alert("Por favor selecciona un área de entrega.");
+                return;
+            }
+
             let totalUSD = 0;
-            let message = "🍔 *NUEVO PEDIDO - PRUEBA* 🍔\n\n";
+            let message = "🍔 *NUEVO PEDIDO - LA BAMBUCHA* 🍔\n\n";
             message += "Hola, me gustaría ordenar lo siguiente:\n\n";
 
             cart.forEach(item => {
@@ -429,9 +532,20 @@
                 }
             });
 
-            const totalBs = totalUSD * TASA_CAMBIO;
+            // Información de entrega
             message += `\n━━━━━━━━━━━━━━━━━━━━━━\n`;
-            message += `💵 *TOTAL USD:* $${totalUSD.toFixed(2)}\n`;
+            if(orderData.deliveryType === 'delivery') {
+                const zone = DELIVERY_ZONES.find(z => z.id === orderData.selectedZone);
+                message += `🚗 *TIPO:* Delivery\n`;
+                message += `📍 *ÁREA:* ${zone ? zone.name : 'No especificada'}\n`;
+                message += `💰 *COSTO DELIVERY:* $${orderData.deliveryCost.toFixed(2)}\n\n`;
+            } else {
+                message += `🏪 *TIPO:* Pick up\n\n`;
+            }
+
+            const finalTotal = totalUSD + orderData.deliveryCost;
+            const totalBs = finalTotal * TASA_CAMBIO;
+            message += `💵 *TOTAL USD:* $${finalTotal.toFixed(2)}\n`;
             message += `🇻🇪 *TOTAL BS (Ref):* Bs ${totalBs.toLocaleString('es-VE', { minimumFractionDigits: 2 })}\n\n`;
             message += "¡Quedo atento! 👨‍🍳✨";
 
